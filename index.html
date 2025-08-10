@@ -5,237 +5,235 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Busted Tusk Kauri Co.</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Crimson+Text&display=swap');
-    
+    /* Colors */
     :root {
       --sage-green: #9caf88;
-      --forest-green: #2f4f4f; /* Slight blue hue */
-      --bright-orange: #ff6f3c;
-      --background: #f7f9f5;
-      --text-color: #2f3a33;
+      --forest-green: #305d4f; /* slight blue hue */
+      --rich-brown: #6a3e1a; /* rich warm brown replacing orange */
+      --background: #f5f5f0;
+      --text-color: #2f2f2f;
     }
 
+    /* Base resets */
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
-      background: var(--background);
+      font-family: 'Georgia', serif;
+      background-color: var(--background);
       color: var(--text-color);
-      font-family: 'Crimson Text', serif;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      scroll-behavior: smooth;
+      font-size: 18px;
+      padding: 0 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background: var(--sage-green);
-      border-bottom: 3px solid var(--bright-orange);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      z-index: 1000;
-      font-family: 'Cormorant Garamond', serif;
+    h1, h2 {
+      font-family: 'Georgia', serif;
       font-weight: 700;
-      font-size: 1.1rem;
-    }
-    nav a {
       color: var(--forest-green);
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: color 0.3s ease;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
     }
-    nav a:hover,
-    nav a:focus {
-      color: var(--bright-orange);
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--rich-brown);
+      padding-bottom: 0.3rem;
+    }
+    p {
+      margin-bottom: 1.3rem;
     }
 
+    /* Header and logo */
     header {
       text-align: center;
-      padding: 3rem 1rem 2rem;
-      background: var(--background);
-      position: relative;
+      margin: 2rem 0 3rem 0;
     }
     .logo-container {
       display: inline-block;
-      border: 6px solid var(--forest-green);
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      max-width: 280px;
-      width: 100%;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      border: 5px solid var(--forest-green);
+      padding: 10px;
+      border-radius: 8px;
+      background-color: var(--sage-green);
+      margin-bottom: 1rem;
     }
     .logo-container img {
-      width: 100%;
+      max-width: 250px;
       height: auto;
       display: block;
+      margin: 0 auto;
+      user-select: none;
     }
-    header h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      font-size: 3.2rem;
-      margin: 0 0 0.3rem;
-      color: var(--forest-green);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-    header p.intro {
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-      font-size: 1.15rem;
-      color: var(--text-color);
-      font-weight: 400;
-      line-height: 1.5;
-    }
-    header p.contact-brief {
-      font-size: 1rem;
-      color: var(--forest-green);
-      margin-bottom: 3rem;
-      font-style: italic;
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto 4rem;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3.5rem;
-    }
-    section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
+    .site-title {
       font-size: 2rem;
+      font-weight: 900;
       color: var(--forest-green);
-      border-bottom: 3px solid var(--bright-orange);
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 0.1em;
+      margin-top: 0.4rem;
     }
-    section p {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      font-weight: 400;
+
+    /* Accent text */
+    .highlight-brown {
+      color: var(--rich-brown);
+      font-weight: 600;
     }
-    footer {
-      background: var(--forest-green);
-      color: var(--background);
-      text-align: center;
-      padding: 2rem 1rem;
-      font-family: 'Crimson Text', serif;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-    }
-    footer a {
-      color: var(--bright-orange);
+    a {
+      color: var(--rich-brown);
       text-decoration: none;
-      font-weight: 700;
     }
-    footer a:hover,
-    footer a:focus {
+    a:hover {
       text-decoration: underline;
     }
 
+    /* Contact section */
+    .contact {
+      border: 2px solid var(--rich-brown);
+      padding: 1rem;
+      margin: 2rem 0;
+      border-radius: 6px;
+      background-color: #fdf6f0;
+      text-align: center;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 3rem;
+    }
+
+    /* Gallery placeholder */
+    .gallery-coming-soon {
+      border: 2px dashed var(--forest-green);
+      padding: 2rem;
+      text-align: center;
+      font-weight: 700;
+      color: var(--forest-green);
+      background-color: #ebf2ed;
+      font-size: 1.1rem;
+      border-radius: 8px;
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-        letter-spacing: 2px;
+      body {
+        font-size: 16px;
       }
-      nav {
-        gap: 1rem;
-        font-size: 1rem;
+      h1 {
+        font-size: 2.4rem;
+      }
+      .logo-container img {
+        max-width: 180px;
       }
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#history">History</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <header>
+    <div class="logo-container">
+      <img src="IMG_0366.jpeg" alt="Busted Tusk Kauri Co. Logo" />
+    </div>
+    <div class="site-title">BUSTED TUSK KAURI CO.</div>
+  </header>
 
-<header id="home">
-  <div class="logo-container">
-    <img src="IMG_0366.jpeg" alt="Busted Tusk Logo" />
-  </div>
-  <h1>Busted Tusk Kauri Co.</h1>
-  <p class="intro">
-    Born from ancient forests and forged by the sea, our reclaimed kauri wood carries a story unlike any other. Harvested from New Zealand’s legendary old-growth kauri—trees that stood for millennia, shaping their unique ecosystem—this timber was crafted into <em>The Walrus</em>, a vessel that crossed the Pacific three times, enduring harsh oceans and time itself.<br><br>
-    Today, this rare wood, salvaged with care after nearly 80 years at sea, is reborn through skilled hands, transforming history into handcrafted works of art. More than wood, it’s a living legacy—woven with deep Māori reverence, colonial history, and the rugged spirit of maritime adventure.<br><br>
-    Explore the full journey of kauri—from Gondwana roots to global voyages—and discover how every piece holds a world of meaning, resilience, and timeless craft.
-  </p>
-  <p class="contact-brief">
-    For custom pendants hand-crafted by Busted Tusk’s artisan woodsmith, please contact <a href="mailto:bustedtusk@gmail.com">bustedtusk@gmail.com</a>.
-  </p>
-</header>
+  <section id="intro">
+    <p>Born from ancient forests and forged by the sea, our reclaimed kauri wood carries a story unlike any other. Harvested from New Zealand’s legendary old-growth kauri—trees that stood for millennia, shaping their unique ecosystem—this timber was crafted into The Walrus, a vessel that crossed the Pacific three times, enduring harsh oceans and time itself.</p>
+    <p>Today, this rare wood, salvaged with care after nearly 80 years at sea, is reborn through skilled hands, transforming history into handcrafted works of art. More than wood, it’s a living legacy—woven with deep Māori reverence, colonial history, and the rugged spirit of maritime adventure.</p>
+    <p>Explore the full journey of kauri—from Gondwana roots to global voyages—and discover how every piece holds a world of meaning, resilience, and timeless craft.</p>
 
-<main id="history">
-
-  <section>
-    <h2>1. Voyage of the Walrus</h2>
-    <p><em>The Walrus</em> is a robust bluewater sailboat designed and built by T.C. Ces Watson in 1946 at his Tutukaka design studios. Constructed from old-growth New Zealand kauri using triple-planked traditional techniques and bronze fastenings, it was built to endure New Zealand’s aggressive ocean conditions. Over the decades, it crossed the Pacific Ocean three times, traveling between New Zealand, California, and beyond, proving its seaworthiness and the quality of its construction.</p>
+    <div class="contact">
+      Contact Busted Tusk Kauri Co. at <a href="mailto:bustedtusk@gmail.com">bustedtusk@gmail.com</a> to request custom pendants handcrafted by Busted Tusk’s official artisan woodsmith.
+    </div>
   </section>
 
-  <section>
-    <h2>2. Builder’s Standard</h2>
-    <p>T.C. Ces Watson spared no expense in the construction of <em>The Walrus</em>. Using the highest quality kauri timber available, the boat features heavy-duty triple planking, extensive bronze fasteners, and a design that prioritizes strength and durability. This vessel was built not just for function but as a testament to New Zealand’s premier boatbuilding craftsmanship, capable of withstanding the harshest ocean environments.</p>
+  <section id="history">
+
+    <h2>Section 1: Voyage of the Walrus</h2>
+    <p>The Walrus was a 36-foot bluewater sailing vessel built in 1946 in Tutukaka, New Zealand, by one of the most respected shipwrights of the post-war Pacific. Constructed entirely of old-growth kauri—trees that had stood for centuries before being felled—the vessel embodied both the endurance of a seafaring tradition and the ecological wealth of Aotearoa’s forests. Every plank, rib, and spar was cut, shaped, and fastened with a precision born from generations of maritime craftsmanship.</p>
+    <p>Over her long life, the Walrus crossed the Pacific three times, enduring the full measure of open-ocean conditions. The vessel was not merely a machine for travel, but a living archive of thousands of nautical miles. Her timbers bear the salt scars of equatorial crossings, the strain of storm swells, and the resonance of countless days under sail.</p>
+    <p>In her later years, the Walrus found harbor in Sausalito, California—a waterfront whose docks and boatyards became a haven for artists, thinkers, and mariners who shaped American counterculture. Here, her presence overlapped with the lingering spirit of figures such as philosopher Alan Watts, poet and songwriter Shel Silverstein, and the famously unconventional “Madam Mayor” Sally Stanford, whose leadership and personality left their mark on the waterfront community.</p>
+    <p>The Walrus represents a rare convergence of histories: the indigenous forests of Aotearoa; the colonial and maritime routes of the Pacific; the golden era of wooden boatbuilding; and the cultural ferment of mid-20th-century Sausalito. Her kauri timbers are not just wood—they are witnesses to both ecological time and human endeavor.</p>
+    <p>It is from this vessel, after seven decades of service, that a small amount of material has been respectfully reclaimed. This is not salvage in the conventional sense, but a stewardship of living heritage: preserving the story of a vessel that bridged oceans, generations, and cultures.</p>
+
+    <h2>Section 2: Old-Growth Kauri</h2>
+    <p>Agathis australis, commonly known as kauri, is a conifer species endemic to the northern regions of New Zealand’s North Island. These trees are among the longest-living and largest trees on Earth, with some specimens—such as Tāne Mahuta—reaching heights of approximately 45 meters and girths exceeding 15 meters. Certain trees, like Te Matua Ngahere, are believed to be between 1,500 and 2,500 years old, while historical accounts suggest that now-lost giants may have reached over 20 meters in girth and possibly lived for up to 4,000 years.</p>
+    <p>Kauri thrives in nutrient-poor, often waterlogged soils where most other species cannot survive. Through complex ecological interactions—including the formation of resinous litter that alters soil chemistry and root symbioses with mycorrhizal fungi—kauri trees create and maintain unique forest ecosystems. These forests act as foundational keystone communities, stabilizing the landscape and enabling the regeneration of biodiversity after natural disturbances such as landslides or fire.</p>
+    <p>The timber produced by mature kauri is exceptionally prized for its density, dimensional stability, fine grain, and natural resistance to rot. Historically, it was the wood of choice for shipbuilding, construction, and fine craftsmanship throughout New Zealand and beyond. Kauri timber sourced for vessels like The Walrus represents some of the highest-grade wood ever harvested—dense, clear, and free of defects—a resource that is now functionally extinct in commercial supply due to widespread deforestation and conservation protections.</p>
+    <p>The ancient forests that once supplied this wood spanned approximately 1.5 million hectares before human settlement and industrial logging reduced them to less than 4,000 hectares today. The rarity of old-growth kauri and its irreplaceable qualities confer immense cultural, ecological, and economic value to reclaimed timber, making each piece a tangible link to a primordial landscape and the long history of human interaction with it.</p>
+
+    <h2>Section 3: The Builder’s Standard</h2>
+    <p>T.C. Ces Watson, the builder of The Walrus, operated in a period marked by both post-war scarcity and a strong tradition of New Zealand boatbuilding craftsmanship. His approach to construction combined conservative overbuilding techniques with the highest quality materials available, reflecting a commitment to durability and seaworthiness above all else.</p>
+    <p>The Walrus’s hull employed a triple-planked method, a technique involving three layers of carefully fitted planks for enhanced structural strength and resilience. This method was particularly suited to New Zealand’s demanding ocean conditions, where strong currents, sudden storms, and rough seas necessitated vessels capable of enduring extreme stresses.</p>
+    <p>Throughout the vessel, bronze fastenings were used instead of more common iron or steel. Bronze offered superior corrosion resistance, especially in saltwater environments, ensuring longevity and reducing maintenance. In the resource-constrained post-World War II era, the choice of bronze fastenings signaled an intentional investment in lasting quality rather than short-term economy.</p>
+    <p>The spars of The Walrus were constructed from Douglas fir, valued for its excellent strength-to-weight ratio, enabling efficient sail handling without compromising durability. This combination of triple-planked kauri hull, bronze fastenings, and Douglas fir spars created a vessel engineered for sustained, demanding service, embodying a level of craftsmanship that reflected both tradition and exceptional material stewardship.</p>
+
+    <h2>Section 4: Service at Sea</h2>
+    <p>The Walrus demonstrated its seaworthiness through multiple ocean voyages, completing three crossings of the Pacific Ocean during its operational life. These crossings tested the vessel against varied and often challenging conditions, including open-water swells, unpredictable weather patterns, and extended periods away from port.</p>
+    <p>Designed for blue-water sailing, the vessel was capable of long-distance travel without the need for frequent repairs or refitting. Its sturdy triple-planked kauri construction, combined with robust rigging and spars, allowed it to withstand the stresses imposed by the Pacific’s open seas.</p>
+    <p>Throughout its years of service, The Walrus was used exclusively as a personal sailing vessel, reflecting a balance of performance, reliability, and comfort. Its longevity without major structural overhauls stands as a testament to the durability of both the craftsmanship and the kauri timber from which it was built.</p>
+
+    <h2>Section 5: Reclamation</h2>
+    <p>After nearly 80 years of service, The Walrus—a heavily overbuilt vessel weighing approximately 34,000 pounds—was rigorously dismantled over the course of two and a half months. Due to its robust triple-planked construction and extensive use of bronze fastenings, traditional salvage methods were impractical. Instead, Busted Tusk’s eccentric traveling artisan woodsmith undertook the demanding process almost single-handedly.</p>
+    <p>Despite the intensity of the dismantling, significant old-growth kauri timbers and key components were recovered with much of their structural integrity and historical character intact. This preserved a direct connection to both the vessel’s craftsmanship and the ancient forests from which the wood was originally sourced.</p>
+    <p>This raw and personal approach to reclamation reflects a deep respect for the material and its story, transforming the end of The Walrus’s life into the beginning of new creative endeavors.</p>
+
+    <h2>Section 6: The Artisan Woodsmith’s Journey</h2>
+    <p>The reclamation of The Walrus was the culmination of a twelve-year personal journey rooted in respect for history, craftsmanship, and the natural world. This extended process was driven by an intentional commitment to honor the vessel and the ancient kauri timbers it contained.</p>
+    <p>Approaching the work as an artisan woodsmith, the dismantling and salvage were acts of stewardship rather than commercial salvage. The goal was to preserve the material’s integrity and story, acknowledging the deep connection between human creativity and natural legacy.</p>
+    <p>This journey reflects a broader philosophy of sustainability and mindful interaction with materials, emphasizing that the wood’s value lies not only in its physical form but also in the stories embedded within its grain.</p>
+
+    <h2>Section 7: The Material’s Second Life</h2>
+    <p>The reclaimed kauri timbers from The Walrus carry with them a profound history—both ecological and human—and now enter a new phase through creative transformation. These ancient woods, once part of vast, centuries-old forests and then integral to a vessel that braved the Pacific, are given renewed purpose as they are shaped into jewelry, musical instruments, and other crafted objects.</p>
+    <p>Each piece made from this material embodies not only the physical qualities of kauri—its density, warmth, and distinctive grain—but also the layered stories of natural growth, maritime adventure, and skilled craftsmanship. This “second life” extends the material’s journey, allowing its resonance to continue in forms that can be held, worn, or played.</p>
+    <p>Through this process, the wood’s meaning evolves but remains anchored in respect for its origins and a commitment to honoring the living history embedded in every fiber.</p>
+
+    <h2>Section 8: The Ecological Significance</h2>
+    <p>Kauri trees (Agathis australis) are foundational species within their native ecosystems in northern New Zealand. Thriving in nutrient-poor, often waterlogged soils where few other plants can survive, kauri create and maintain a unique forest environment that supports a diverse range of flora and fauna.</p>
+    <p>The tree’s extensive root systems form symbiotic relationships with mycorrhizal fungi, enabling efficient nutrient exchange in challenging soil conditions. Kauri forests also influence soil chemistry by accumulating a thick layer of resinous litter, which inhibits the growth of competing vegetation and alters nutrient cycles.</p>
+    <p>These ecological characteristics position kauri as a keystone species, playing a critical role in stabilizing landscapes, facilitating regeneration after disturbances, and shaping biodiversity patterns. Their presence supports specialized animal species, some of which rely heavily on the forest structure and resources kauri provide.</p>
+    <p>The survival and health of kauri forests are essential not only for maintaining ecological balance but also for preserving the evolutionary legacy of these ancient conifers, which trace their lineage back to the supercontinent Gondwana more than 200 million years ago.</p>
+
+    <h2>Section 9: Cultural Reverence and Māori Connection</h2>
+    <p>For Māori, kauri trees possess deep spiritual significance, embodying both mana and mauri. Mana refers to authority, prestige, and spiritual power, while mauri is the life force or essence that animates all living things. Kauri wood was considered sacred, treated with great respect, and used selectively for important cultural artifacts, carving, and building.</p>
+    <p>Māori viewed kauri not only as a physical resource but as a living ancestor and guardian of the forest. The trees were integrated into their worldview and cosmology, symbolizing strength, endurance, and connection to the land and ancestors.</p>
+    <p>The arrival of Māori as skilled seafarers and settlers in Aotearoa introduced a society deeply attuned to natural resources, including kauri. Their practices aimed to balance use with respect, maintaining the forests through traditional knowledge and tikanga (customary practices).</p>
+    <p>This relationship reflects a profound understanding of sustainability and the interdependence of people and environment, principles that remain relevant today as conservation efforts seek to protect remaining kauri forests from threats such as kauri dieback disease.</p>
+
+    <h2>Section 10: Colonial Impact and Legacy</h2>
+    <p>The arrival of Europeans in Aotearoa in the late 18th century marked the beginning of profound and often devastating changes for the land, its forests, and the indigenous Māori people. Early European explorers were struck by the vastness and grandeur of New Zealand’s kauri forests, recognizing the timber’s exceptional qualities for shipbuilding and construction.</p>
+    <p>James Cook’s three voyages between 1769 and 1779 established critical European contact with New Zealand. On his final voyage, Cook charted the coastlines of Alaska and the Hawaiian Islands, naming numerous locations after himself, including Cook Inlet (originally Tikahtnu), Cook Bay, and Cook River. The renaming of these places reflects a pattern of colonial assertion that often obscured indigenous names and histories.</p>
+    <p>Cook’s accounts acknowledged the kauri, and by the early 19th century, the demand for kauri timber had increased significantly. This demand accelerated with the growth of British naval power, which relied heavily on durable timbers for shipbuilding. The English and Scottish crowns, having exhausted their own old-growth forests by the 18th century, looked overseas for new supplies. New Zealand’s kauri became a coveted resource.</p>
+    <p>Logging practices in New Zealand were often wasteful and destructive. Large swaths of forest were clear-cut, with significant portions burned to facilitate land clearance. In some cases, forests were flooded by dams built to transport logs downstream; these dams were then deliberately broken, causing ecological disruption. These practices, coupled with land sales by the colonial government for minimal prices, led to rapid deforestation.</p>
+    <p>During this period, the musket wars (approximately 1807–1842) intensified conflict among Māori groups. These wars were distinct for their scale and lethality, facilitated by the introduction of European firearms. The population losses were substantial, reshaping tribal dynamics.</p>
+    <p>The Moriori people of the Chatham Islands, known for their pacifism under the Nunuku law forbidding murder, suffered greatly. They were invaded and subjugated by mainland Māori groups, resulting in enslavement and population decline—a grim reminder of how cultural values can be overwhelmed in violent conflicts.</p>
+    <p>Colonial governments further displaced Māori through legal mechanisms such as the Native Land Court, which systematically stripped Māori of land ownership. The exploitation of kauri timber was not merely environmental but tied to broader political and social dispossession.</p>
+    <p>The timber’s value for shipbuilding linked it directly to global naval supremacy, underpinning British imperial power. The demand for kauri reflected this geopolitical context, making the forests a strategic resource.</p>
+    <p>The legacy of these interactions—ecological loss, cultural upheaval, and enduring socio-political challenges—continues to shape New Zealand’s landscape and society today. Understanding this history is crucial to appreciating the full significance of kauri wood and the vessel built from it, and to recognizing the importance of conservation and reconciliation efforts moving forward.</p>
+
+    <div class="contact">
+      For inquiries or custom creations, contact Busted Tusk Kauri Co. at <a href="mailto:bustedtusk@gmail.com">bustedtusk@gmail.com</a>.
+    </div>
+
   </section>
 
-  <section>
-    <h2>3. Service at Sea</h2>
-    <p><em>The Walrus</em> served as a personal sailing vessel throughout its life. Its numerous ocean crossings tested its build against open-water swells and unpredictable weather. Thanks to its robust design and superior materials, it remained structurally sound and reliable without frequent repairs, a testament to the durability of the kauri timber and craftsmanship.</p>
+  <section class="gallery-coming-soon">
+    <p><strong>Coming Soon:</strong> A gallery showcasing handcrafted pieces made from reclaimed kauri timbers.</p>
+    <p>All proceeds from Busted Tusk operations are donated to the ecological nonprofit <em>Glomerea</em>, supporting connections with ancient old-growth ecosystems.</p>
+    <p>Stay tuned for updates and new creations.</p>
   </section>
 
-  <section>
-    <h2>4. Reclamation</h2>
-    <p>After nearly 80 years of service, <em>The Walrus</em>, a heavily overbuilt vessel weighing approximately 34,000 pounds, was rigorously dismantled over two and a half months. Due to its robust triple-planked construction and extensive bronze fastenings, traditional salvage methods were impractical. Instead, an artisan woodsmith undertook the demanding process almost single-handedly, recovering significant old-growth kauri timbers and key components that retained much of their structural integrity and historical character.</p>
-  </section>
-
-  <section>
-    <h2>5. The Artisan Woodsmith’s Journey</h2>
-    <p>The reclamation of <em>The Walrus</em> culminated a twelve-year personal journey rooted in respect for history, craftsmanship, and nature. Approaching the work as an artisan woodsmith, the dismantling and salvage were acts of stewardship rather than commercial salvage, aiming to preserve the wood’s integrity and story, and acknowledging the deep connection between human creativity and natural legacy.</p>
-  </section>
-
-  <section>
-    <h2>6. The Material’s Second Life</h2>
-    <p>The reclaimed kauri timbers carry a profound history—both ecological and human—and now enter a new phase through creative transformation. Once part of ancient forests and integral to a vessel that braved the Pacific, these woods are shaped into jewelry, instruments, and art. Each piece embodies the wood’s unique qualities and layered stories, extending its journey in forms that can be held, worn, or played.</p>
-  </section>
-
-  <section>
-    <h2>7. The Ecological Significance</h2>
-    <p>Kauri trees (Agathis australis) are foundational species in northern New Zealand’s forests, able to thrive in nutrient-poor, waterlogged soils where few other species succeed. Their deep ecological role includes shaping and controlling their environment, supporting a unique ecosystem through symbiotic relationships that have evolved over millions of years since their ancestors originated in Gondwana roughly 240 million years ago. Kauri forests represent a living link to ancient times and are known for the unparalleled resonance of their timber, prized worldwide.</p>
-  </section>
-
-  <section>
-    <h2>8. Cultural Reverence</h2>
-    <p>The Māori hold kauri trees in deep spiritual regard, honoring their mana (prestige, authority) and mauri (life force). Since their arrival, Māori have maintained the sacredness of kauri, using its wood carefully for waka (canoes), carvings, and tools, always respecting the tree’s significance within the forest and community.</p>
-  </section>
-
-  <section>
-    <h2>9. Colonial Impact</h2>
-    <p>The arrival of Europeans led to widespread kauri logging driven by demand for shipbuilding and construction. From the late 18th century onward, vast forests were exploited with inefficient and often destructive methods such as damming and flooding forests, burning groves, and careless waste. The government sold huge tracts for minimal prices, accelerating deforestation and profoundly altering the landscape and Māori land ownership through land courts and colonization. The Musket Wars (early 19th century), including the tragic genocide of the pacifist Moriori people, further complicated this era’s social upheaval.</p>
-  </section>
-
-  <section>
-    <h2>10. Legacy and Preservation</h2>
-    <p>The timber used in <em>The Walrus</em> came from some of the last of the highest quality old-growth kauri available—trees that we will never see again. This wood, sourced by T.C. Ces Watson in post-WWII New Zealand, represents a vanished era of craftsmanship and natural grandeur. Today, as kauri forests face threats like disease and habitat loss, salvaged timber like this carries forward a legacy of resilience, story, and reverence.</p>
-  </section>
-
-</main>
-
-<footer id="contact">
-  <p>For inquiries or custom pendant requests crafted with hand tools in the wilderness by Busted Tusk’s artisan woodsmith, contact us at <a href="mailto:bustedtusk@gmail.com">bustedtusk@gmail.com</a>.</p>
-</footer>
+  <footer class="contact">
+    Contact Busted Tusk Kauri Co. anytime at <a href="mailto:bustedtusk@gmail.com">bustedtusk@gmail.com</a>.
+  </footer>
 
 </body>
 </html>
