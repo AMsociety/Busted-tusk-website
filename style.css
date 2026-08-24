@@ -1,16 +1,16 @@
 /* --------------------------------------------------
    BUSTED TUSK
    Kauri Company
-   Simple, refined material-focused design
 -------------------------------------------------- */
 
 :root {
-    --background: #e8dfcf;
-    --paper: #f4eee1;
-    --text: #35271f;
-    --muted: #75695d;
-    --line: #b9a994;
-    --accent: #7a4b32;
+    --background: #2b211b;
+    --paper: #d8c8a9;
+    --text: #30231c;
+    --muted: #66584a;
+    --line: #8a7355;
+    --accent: #8b4a2f;
+    --gold: #c28a3d;
 }
 
 /* Basic reset */
@@ -78,11 +78,11 @@ body {
 .navigation a {
     position: relative;
 
-    color: var(--text);
+    color: #d8c8a9;
 
     text-decoration: none;
 
-    padding: 15px 28px;
+    padding: 15px 32px;
 
     font-family:
         Arial,
@@ -91,7 +91,7 @@ body {
 
     font-size: 0.82rem;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
 
     text-transform: uppercase;
 
@@ -103,9 +103,7 @@ body {
 }
 
 /*
-   Subtle kauri-style chatoyance.
-   The highlight sweeps across the button
-   when the pointer moves over it.
+   Kauri chatoyance highlight.
 */
 
 .navigation a::before {
@@ -114,35 +112,35 @@ body {
     position: absolute;
 
     top: 0;
-    left: -120%;
+    left: -130%;
 
-    width: 70%;
+    width: 65%;
     height: 100%;
 
     background:
         linear-gradient(
             105deg,
             transparent 0%,
-            rgba(214, 168, 91, 0.08) 35%,
-            rgba(232, 190, 111, 0.38) 50%,
-            rgba(214, 168, 91, 0.08) 65%,
+            rgba(194, 138, 61, 0.04) 25%,
+            rgba(194, 138, 61, 0.55) 50%,
+            rgba(194, 138, 61, 0.08) 68%,
             transparent 100%
         );
 
     transform: skewX(-18deg);
 
     transition:
-        left 0.55s ease;
+        left 0.6s ease;
 }
 
 .navigation a:hover {
     background: var(--accent);
 
-    color: var(--paper);
+    color: #f2e5c7;
 }
 
 .navigation a:hover::before {
-    left: 150%;
+    left: 155%;
 }
 
 /* Main content */
@@ -163,24 +161,27 @@ main {
     padding: 55px 65px;
 
     border: 1px solid var(--line);
+
+    box-shadow:
+        0 3px 14px rgba(0, 0, 0, 0.18);
 }
 
 .section h1 {
     margin: 0 0 20px;
 
+    color: var(--text);
+
     font-size: 2rem;
 
     font-weight: normal;
 
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
 }
 
 .section p {
-    max-width: none;
-
     margin: 0;
 
-    color: #584b41;
+    color: #4b3d32;
 
     font-size: 1.05rem;
 }
@@ -196,7 +197,7 @@ footer {
 
     text-align: center;
 
-    color: var(--muted);
+    color: #b8a88e;
 
     font-family:
         Arial,
@@ -208,8 +209,6 @@ footer {
     letter-spacing: 0.08em;
 }
 
-/* Footer logo */
-
 .footer-logo {
     display: block;
 
@@ -220,60 +219,7 @@ footer {
     margin: 0 auto 20px;
 }
 
-/* Images */
-
-.regional-image {
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-}
-
-.research-image {
-    width: 100%;
-
-    margin: 40px 0;
-
-    padding: 0;
-
-    text-align: center;
-}
-
-.research-image img {
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    margin: 0 auto;
-}
-
-.research-image figcaption {
-    margin-top: 8px;
-
-    color: var(--muted);
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.65rem;
-
-    letter-spacing: 0.04em;
-}
-
-/* Paragraph spacing */
-
-#about p,
-#research p,
-#field-journal p {
-    margin-bottom: 1.5rem;
-}
-
-/* Media links */
+/* Links */
 
 .media-links,
 .support-links {
@@ -322,7 +268,7 @@ footer {
 .support-links a:hover {
     background: var(--accent);
 
-    color: var(--paper);
+    color: #f2e5c7;
 }
 
 /* Mobile */
