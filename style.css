@@ -1,0 +1,365 @@
+/* --------------------------------------------------
+   BUSTED TUSK
+   Kauri Company
+   Simple, refined material-focused design
+-------------------------------------------------- */
+
+:root {
+    --background: #e8dfcf;
+    --paper: #f4eee1;
+    --text: #35271f;
+    --muted: #75695d;
+    --line: #b9a994;
+    --accent: #7a4b32;
+}
+
+/* Basic reset */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    line-height: 1.7;
+}
+
+/* Header */
+
+.site-header {
+    width: 100%;
+
+    background: var(--background);
+
+    text-align: center;
+
+    padding: 16px 20px 12px;
+}
+
+.site-header img {
+    display: block;
+
+    width: min(100%, 750px);
+
+    height: auto;
+
+    margin: 0 auto;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    padding: 0 20px;
+}
+
+.navigation a {
+    position: relative;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    padding: 15px 28px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.82rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    overflow: hidden;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+/*
+   Subtle kauri-style chatoyance.
+   The highlight sweeps across the button
+   when the pointer moves over it.
+*/
+
+.navigation a::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            105deg,
+            transparent 0%,
+            rgba(214, 168, 91, 0.08) 35%,
+            rgba(232, 190, 111, 0.38) 50%,
+            rgba(214, 168, 91, 0.08) 65%,
+            transparent 100%
+        );
+
+    transform: skewX(-18deg);
+
+    transition:
+        left 0.55s ease;
+}
+
+.navigation a:hover {
+    background: var(--accent);
+
+    color: var(--paper);
+}
+
+.navigation a:hover::before {
+    left: 150%;
+}
+
+/* Main content */
+
+main {
+    width: min(100% - 40px, 900px);
+
+    margin: 0 auto;
+}
+
+/* Sections */
+
+.section {
+    background: var(--paper);
+
+    margin: 55px 0;
+
+    padding: 55px 65px;
+
+    border: 1px solid var(--line);
+}
+
+.section h1 {
+    margin: 0 0 20px;
+
+    font-size: 2rem;
+
+    font-weight: normal;
+
+    letter-spacing: 0.03em;
+}
+
+.section p {
+    max-width: none;
+
+    margin: 0;
+
+    color: #584b41;
+
+    font-size: 1.05rem;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid var(--line);
+
+    padding: 30px 20px;
+
+    margin-top: 70px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.08em;
+}
+
+/* Footer logo */
+
+.footer-logo {
+    display: block;
+
+    width: 120px;
+
+    height: auto;
+
+    margin: 0 auto 20px;
+}
+
+/* Images */
+
+.regional-image {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+.research-image {
+    width: 100%;
+
+    margin: 40px 0;
+
+    padding: 0;
+
+    text-align: center;
+}
+
+.research-image img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+}
+
+.research-image figcaption {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.04em;
+}
+
+/* Paragraph spacing */
+
+#about p,
+#research p,
+#field-journal p {
+    margin-bottom: 1.5rem;
+}
+
+/* Media links */
+
+.media-links,
+.support-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.media-links a,
+.support-links a {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border: 1px solid var(--line);
+
+    color: var(--text);
+
+    background: var(--paper);
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.78rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.media-links a:hover,
+.support-links a:hover {
+    background: var(--accent);
+
+    color: var(--paper);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 15px;
+    }
+
+    .navigation {
+        display: block;
+
+        padding: 0;
+    }
+
+    .navigation a {
+        display: block;
+
+        text-align: center;
+
+        padding: 12px;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    main {
+        width: min(100% - 24px, 900px);
+    }
+
+    .section {
+        margin: 30px 0;
+
+        padding: 35px 25px;
+    }
+
+    .section h1 {
+        font-size: 1.7rem;
+    }
+}
