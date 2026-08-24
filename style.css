@@ -271,3 +271,44 @@ footer {
         font-size: 1.7rem;
     }
 }
+
+/* Protoforms Gallery */
+
+.protoforms-gallery {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.protoform-banner,
+.protoform-collection {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.protoform-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.protoform-row a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.protoform-row img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
