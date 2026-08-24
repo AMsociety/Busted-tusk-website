@@ -9,8 +9,7 @@
     --text: #30231c;
     --muted: #66584a;
     --line: #8a7355;
-    --accent: #8b4a2f;
-    --gold: #c28a3d;
+    --accent: #5A4638;
 }
 
 /* Basic reset */
@@ -76,9 +75,7 @@ body {
 }
 
 .navigation a {
-    position: relative;
-
-    color: #d8c8a9;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -95,53 +92,18 @@ body {
 
     text-transform: uppercase;
 
-    overflow: hidden;
-
     transition:
         color 0.25s ease,
         background-color 0.25s ease;
 }
 
-/*
-   Kauri chatoyance highlight.
-*/
-
-.navigation a::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -130%;
-
-    width: 65%;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            105deg,
-            transparent 0%,
-            rgba(194, 138, 61, 0.04) 25%,
-            rgba(194, 138, 61, 0.55) 50%,
-            rgba(194, 138, 61, 0.08) 68%,
-            transparent 100%
-        );
-
-    transform: skewX(-18deg);
-
-    transition:
-        left 0.6s ease;
-}
-
 .navigation a:hover {
     background: var(--accent);
 
-    color: #f2e5c7;
+    color: var(--background);
 }
 
-.navigation a:hover::before {
-    left: 155%;
-}
+
 
 /* Main content */
 
